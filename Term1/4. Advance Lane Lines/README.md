@@ -4,6 +4,9 @@ Advance Lane Line Detection for Self driving car
 With original training data set results of network was over fitted. Because some image class had few no of images. After adding additional
 images to class with lacking images network accuracy improved a lot. I first trained network on normalized color images, in next attempt I 
 gray scaled images and normalized it. I found there is not much difference in accuracy but gray scaled image helped to train network faster.  
+
+![image](https://github.com/oalahurikar/Self-Driving/assets/13579623/1198aace-f294-4586-a051-6c45ebfdb3cb)
+
 # Model Architecture
 I used LeNet CNN architecture with 2 convolutional layers and 3 fully connected layers. First I just used max pooling and my accuracy
 was about 91 % for 30 epochs, but top 5 probabilities showed me some of images predicted wrong because of over fitting. So I introduce drop out, which resolved over fitting issue, also helped to predict top 5 probabilities in reasonable range.  Due to gray scaling my network needed 32x32x1 input images.
@@ -21,3 +24,4 @@ My model predicts all images with accuracy of 83 % except stop sign. I am assumi
 Model Certainty - Softmax Probabilities
 Answer: In top 5 probabilities my model predicts Yield, no entry and general caution signs confidently. For dangerous curve to right sign it predicts by 65 % then 35 % for slippery road and 5 % for children crossing and surprisingly all three images are in triangular form. Model predicts 60 Kmh sign by 80 % which is far higher than reaming 4 probabilities. 
 
+![image](https://github.com/oalahurikar/Self-Driving/assets/13579623/57c1d617-f63a-4866-b931-273291519ce6)
